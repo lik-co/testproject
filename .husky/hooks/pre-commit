@@ -88,15 +88,17 @@ workfile() {
 }
 
 go_build() {
-  go build -v ./...
+  go build -o app -v ./...
 
-    # shellcheck disable=SC2181
-    if [ $? -ne 0 ]; then
-      echo "Build failed."
-      exit 1
-    fi
+  # shellcheck disable=SC2181
+  if [ $? -ne 0 ]; then
+    rm -f app
+    echo "Build failed."
+    exit 1
+  fi
 
-    echo "Build passed successfully!"
+  rm -f app
+  echo "Build passed successfully!"
 }
 
 go_test() {
@@ -127,14 +129,16 @@ go_test_mod() {
 
 go_build_mod() {
   mv go.work go.no.work
-  go build -v ./...
+  go build -o app -v ./...
 
   if [ $? -ne 0 ]; then
-  mv go.no.work go.work
+    rm -f app
+    mv go.no.work go.work
     echo "Build failed."
     exit 1
   fi
 
+  rm -f app
   mv go.no.work go.work
   echo "Build passed successfully!"
 }
