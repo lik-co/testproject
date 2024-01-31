@@ -69,12 +69,13 @@ workfile() {
     check_uncommitted_changes
     check_unpushed_changes
 
-    branch=$(git rev-parse --abbrev-ref HEAD)
+    latest_commit=$(git rev-parse --short HEAD)
+
     cd "$start_dir" || (echo "cannot enter $start_dir directory" && exit 1)
 
-    echo "Updating go.mod lib to branch '$branch'"
+    echo "Updating go.mod lib to commit '$latest_commit'"
+    go get "$source@$latest_commit"
 
-    go get "$source@$branch"
     if [ $? -ne 0 ]; then
       echo "Cannot get library"
       exit 1
