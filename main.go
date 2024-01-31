@@ -1,9 +1,9 @@
 package main
 
-//import "github.com/lik-co/testlib"
+import "github.com/lik-co/testlib"
 
 func main() {
-	//_ = testlib.Test{
-	//	Name: "name",
-	//}
+	_ = testlib.Test{
+		Name: "name",
+	}
 }
