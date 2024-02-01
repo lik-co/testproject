@@ -6,3 +6,5 @@ github.com/lik-co/testlib v0.0.0-20240131125702-ece29b265827 h1:daen0QY0Pwg0BH5G
 github.com/lik-co/testlib v0.0.0-20240131125702-ece29b265827/go.mod h1:JIXcM/AS7T3HrX1VFHF69qWnumZEQMBm17dJoVrBaXY=
 github.com/lik-co/testlib v0.0.0-20240131125824-dcb409ac1c5a h1:T0q6COBFtX+col2vcAVzt7z3MMuLNgoZCWsw5JMDZCc=
 github.com/lik-co/testlib v0.0.0-20240131125824-dcb409ac1c5a/go.mod h1:JIXcM/AS7T3HrX1VFHF69qWnumZEQMBm17dJoVrBaXY=
+github.com/lik-co/testlib v0.0.0-20240201105535-8e6c0ac77279 h1:efik4W5ooNejBcVYhCTBHV5ZKWnbmv9XJMY9e2Yzn5A=
+github.com/lik-co/testlib v0.0.0-20240201105535-8e6c0ac77279/go.mod h1:JIXcM/AS7T3HrX1VFHF69qWnumZEQMBm17dJoVrBaXY=
